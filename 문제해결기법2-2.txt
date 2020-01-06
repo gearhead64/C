@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <math.h> //수학함수들 계산하는 프로그램들을 모아놓은 라이브러리
+
+#define MAX 360 // macro defintion MAX는 360이라는 뜻
+#define MIN 0 //여기선 중요하지않지만 나중에 0이 많이 필요한 상황에서 0을 다른수로 변경하고 싶을때 한번에 고칠수있어
+#define STEP 10
+
+int main() {
+
+	double pi = 4.0 * atan(1.0); //4.0 * atan 1.0 = pi /4
+
+	for (int d = MIN; d <= MAX; d += STEP) {
+		double r = pi *(d / 180.0);
+		double v = sin(r);
+		printf("sin %d : %f\n",d , v);
+	}
+
+}

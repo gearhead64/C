@@ -1,0 +1,16 @@
+각도 0도에서 360도까지 10도 단위로 sine함수값을 계산하여 출력한다.
+
+#include <stdio.h>
+#include <math.h> //수학함수들 계산하는 프로그램들을 모아놓은 라이브러리
+
+int main() {
+
+	double r = 0;
+
+	for (int d = 0; d <= 360; d+=10) {
+		double r = 3.141592*(d / 180.0);
+		double v = sin(r);
+		printf("sin %d : %f\n",d , v);
+	}
+
+}
